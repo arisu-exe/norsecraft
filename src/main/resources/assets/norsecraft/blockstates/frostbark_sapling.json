@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "two:block/frostbark_sapling" }
+        "": { "model": "norsecraft:block/frostbark_sapling" }
     }
 }

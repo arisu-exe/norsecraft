@@ -4,7 +4,27 @@ import io.github.fallOut015.norsecraft.MainNorsecraft;
 import io.github.fallOut015.norsecraft.block.material.MaterialNorsecraft;
 import io.github.fallOut015.norsecraft.block.trees.FrostbarkTree;
 import io.github.fallOut015.norsecraft.particles.ParticleTypesNorsecraft;
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.DoorBlock;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.FlowerPotBlock;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.OreBlock;
+import net.minecraft.block.PressurePlateBlock;
+import net.minecraft.block.RotatedPillarBlock;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.StandingSignBlock;
+import net.minecraft.block.TorchBlock;
+import net.minecraft.block.TrapDoorBlock;
+import net.minecraft.block.WallBlock;
+import net.minecraft.block.WallSignBlock;
+import net.minecraft.block.WallTorchBlock;
+import net.minecraft.block.WoodButtonBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.Direction;
@@ -63,8 +83,8 @@ public class BlocksNorsecraft {
     public static final RegistryObject<Block> CELESTIUM_BLOCK = BLOCKS.register("celestium_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE).strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> URU_BLOCK = BLOCKS.register("uru_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(5.0f, 6.0f).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Block> STARSTONE_TORCH = BLOCKS.register("starstone_torch", () -> new TorchBlock(Block.Properties.of(Material.DECORATION).lightLevel(state -> 16).noCollission().strength(0), ParticleTypesNorsecraft.TWINKLE.get())); // TODO fix?
-    public static final RegistryObject<Block> STARSTONE_WALL_TORCH = BLOCKS.register("starstone_wall_torch", () -> new WallTorchBlock(Block.Properties.of(Material.DECORATION).lightLevel(state -> 16).noCollission().strength(0), ParticleTypesNorsecraft.TWINKLE.get()));
+    public static final RegistryObject<Block> STARSTONE_TORCH = BLOCKS.register("starstone_torch", () -> new TorchBlockNorsecraft(Block.Properties.of(Material.DECORATION).lightLevel(state -> 16).noCollission().strength(0), ParticleTypesNorsecraft.TWINKLE::get)); // TODO fix?
+    public static final RegistryObject<Block> STARSTONE_WALL_TORCH = BLOCKS.register("starstone_wall_torch", () -> new WallTorchBlockNorsecraft(Block.Properties.of(Material.DECORATION).lightLevel(state -> 16).noCollission().strength(0), ParticleTypesNorsecraft.TWINKLE::get));
 
     // Nidavellir
     public static final RegistryObject<Block> REGOLITH = BLOCKS.register("regolith", () -> new Block(Block.Properties.of(MaterialNorsecraft.REGOLITH).strength(1.0f)));

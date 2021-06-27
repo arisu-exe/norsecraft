@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "two:block/starstone_torch" }
+        "": { "model": "norsecraft:block/starstone_torch" }
     }
 }

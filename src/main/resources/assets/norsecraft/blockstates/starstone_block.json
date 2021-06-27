@@ -1,7 +1,7 @@
 {
 	"variants" : {
     	"" : {
-			"model" : "two:block/starstone_block"
+			"model" : "norsecraft:block/starstone_block"
 		}
 	}
 }

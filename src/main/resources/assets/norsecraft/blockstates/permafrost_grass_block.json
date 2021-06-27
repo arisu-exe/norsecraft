@@ -1,11 +1,11 @@
 {
     "variants": {
         "snowy=false": [
-            { "model": "two:block/permafrost_grass_block" },
-            { "model": "two:block/permafrost_grass_block", "y": 90 },
-            { "model": "two:block/permafrost_grass_block", "y": 180 },
-            { "model": "two:block/permafrost_grass_block", "y": 270 }
+            { "model": "norsecraft:block/permafrost_grass_block" },
+            { "model": "norsecraft:block/permafrost_grass_block", "y": 90 },
+            { "model": "norsecraft:block/permafrost_grass_block", "y": 180 },
+            { "model": "norsecraft:block/permafrost_grass_block", "y": 270 }
         ],
-        "snowy=true":  { "model": "two:block/permafrost_grass_block_snow" }
+        "snowy=true":  { "model": "norsecraft:block/permafrost_grass_block_snow" }
     }
 }

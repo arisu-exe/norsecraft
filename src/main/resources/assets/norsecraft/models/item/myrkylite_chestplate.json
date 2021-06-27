@@ -1,6 +1,6 @@
 {
     "parent" : "minecraft:item/generated",
     "textures" : {
-        "layer0" : "two:item/myrkylite_chestplate"
+        "layer0" : "norsecraft:item/myrkylite_chestplate"
     }
 }

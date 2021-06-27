@@ -1,6 +1,6 @@
 {
 	"parent" : "minecraft:block/cube_all",
     "textures" : {
-		"all" : "two:block/nidavellir_celestium_ore"
+		"all" : "norsecraft:block/nidavellir_celestium_ore"
     }
 }

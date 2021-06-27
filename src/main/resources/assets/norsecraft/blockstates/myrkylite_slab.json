@@ -1,7 +1,7 @@
 {
     "variants" : {
-        "type=bottom" : { "model" : "two:block/myrkylite_slab" },
-        "type=top" : { "model" : "two:block/myrkylite_slab_top" },
-        "type=double" : { "model" : "two:block/myrkylite" }
+        "type=bottom" : { "model" : "norsecraft:block/myrkylite_slab" },
+        "type=top" : { "model" : "norsecraft:block/myrkylite_slab_top" },
+        "type=double" : { "model" : "norsecraft:block/myrkylite" }
     }
 }

@@ -1,8 +1,8 @@
 {
     "parent": "minecraft:block/slab_top",
     "textures": {
-        "bottom": "two:block/polished_myrkylite",
-        "top": "two:block/polished_myrkylite",
-        "side": "two:block/polished_myrkylite"
+        "bottom": "norsecraft:block/polished_myrkylite",
+        "top": "norsecraft:block/polished_myrkylite",
+        "side": "norsecraft:block/polished_myrkylite"
     }
 }

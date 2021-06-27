@@ -11,13 +11,13 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class TwinkleParticle extends SpriteTexturedParticle {
     private TwinkleParticle(ClientWorld worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn, double ySpeedIn, double zSpeedIn) {
         super(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, zSpeedIn);
-        this.motionX = this.motionX * (double)0.01F + xSpeedIn;
-        this.motionY = this.motionY * (double)0.01F + ySpeedIn;
-        this.motionZ = this.motionZ * (double)0.01F + zSpeedIn;
-        this.posX += (double)((this.rand.nextFloat() - this.rand.nextFloat()) * 0.05F);
-        this.posY += (double)((this.rand.nextFloat() - this.rand.nextFloat()) * 0.05F);
-        this.posZ += (double)((this.rand.nextFloat() - this.rand.nextFloat()) * 0.05F);
-        this.maxAge = (int)(8.0D / (Math.random() * 0.8D + 0.2D)) + 4;
+        this.xd = this.xd * (double)0.01F + xSpeedIn;
+        this.yd = this.yd * (double)0.01F + ySpeedIn;
+        this.zd = this.zd * (double)0.01F + zSpeedIn;
+        this.x += (double)((this.random.nextFloat() - this.random.nextFloat()) * 0.05F);
+        this.y += (double)((this.random.nextFloat() - this.random.nextFloat()) * 0.05F);
+        this.z += (double)((this.random.nextFloat() - this.random.nextFloat()) * 0.05F);
+        this.lifetime = (int)(8.0D / (Math.random() * 0.8D + 0.2D)) + 4;
     }
 
     @Override
@@ -26,19 +26,19 @@ public class TwinkleParticle extends SpriteTexturedParticle {
     }
     @Override
     public void move(double x, double y, double z) {
-        this.setBoundingBox(this.getBoundingBox().offset(x, y, z));
-        this.resetPositionToBB();
+        this.setBoundingBox(this.getBoundingBox().move(x, y, z));
+        this.setLocationFromBoundingbox();
     }
     @Override
-    public float getScale(float scaleFactor) {
-        float f = ((float)this.age + scaleFactor) / (float)this.maxAge;
-        return this.particleScale * (1.0F - f * f * 0.5F);
+    public float getQuadSize(float scaleFactor) {
+        float f = ((float)this.age + scaleFactor) / (float)this.lifetime;
+        return this.quadSize * (1.0F - f * f * 0.5F);
     }
     @Override
-    public int getBrightnessForRender(float partialTick) {
-        float f = ((float)this.age + partialTick) / (float)this.maxAge;
+    public int getLightColor(float partialTick) {
+        float f = ((float)this.age + partialTick) / (float)this.lifetime;
         f = MathHelper.clamp(f, 0.0F, 1.0F);
-        int i = super.getBrightnessForRender(partialTick);
+        int i = super.getLightColor(partialTick);
         int j = i & 255;
         int k = i >> 16 & 255;
         j = j + (int)(f * 15.0F * 16.0F);
@@ -49,19 +49,19 @@ public class TwinkleParticle extends SpriteTexturedParticle {
     }
     @Override
     public void tick() {
-        this.prevPosX = this.posX;
-        this.prevPosY = this.posY;
-        this.prevPosZ = this.posZ;
-        if (this.age++ >= this.maxAge) {
-            this.setExpired();
+        this.xo = this.x;
+        this.yo = this.y;
+        this.zo = this.z;
+        if (this.age++ >= this.lifetime) {
+            this.remove();
         } else {
-            this.move(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= (double)0.96F;
-            this.motionY *= (double)0.96F;
-            this.motionZ *= (double)0.96F;
+            this.move(this.xd, this.yd, this.zd);
+            this.xd *= (double)0.96F;
+            this.yd *= (double)0.96F;
+            this.zd *= (double)0.96F;
             if (this.onGround) {
-                this.motionX *= (double)0.7F;
-                this.motionZ *= (double)0.7F;
+                this.xd *= (double)0.7F;
+                this.zd *= (double)0.7F;
             }
         }
     }
@@ -74,9 +74,9 @@ public class TwinkleParticle extends SpriteTexturedParticle {
             this.spriteSet = p_i50823_1_;
         }
 
-        public Particle makeParticle(BasicParticleType typeIn, ClientWorld worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
+        public Particle createParticle(BasicParticleType typeIn, ClientWorld worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
             TwinkleParticle twinkleparticle = new TwinkleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed);
-            twinkleparticle.selectSpriteRandomly(this.spriteSet);
+            twinkleparticle.setSpriteFromAge(this.spriteSet);
             return twinkleparticle;
         }
     }

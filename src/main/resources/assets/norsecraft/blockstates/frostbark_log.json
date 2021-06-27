@@ -1,7 +1,7 @@
 {
     "variants" : {
-        "axis=y" :  { "model" : "two:block/frostbark_log" },
-        "axis=z" :   { "model" : "two:block/frostbark_log", "x" : 90 },
-        "axis=x" :   { "model" : "two:block/frostbark_log", "x" : 90, "y" : 90 }
+        "axis=y" :  { "model" : "norsecraft:block/frostbark_log" },
+        "axis=z" :   { "model" : "norsecraft:block/frostbark_log", "x" : 90 },
+        "axis=x" :   { "model" : "norsecraft:block/frostbark_log", "x" : 90, "y" : 90 }
     }
 }

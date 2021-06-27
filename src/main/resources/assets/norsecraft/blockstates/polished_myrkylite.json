@@ -1,7 +1,7 @@
 {
 	"variants" : {
     	"" : {
-			"model" : "two:block/polished_myrkylite"
+			"model" : "norsecraft:block/polished_myrkylite"
 		}
 	}
 }

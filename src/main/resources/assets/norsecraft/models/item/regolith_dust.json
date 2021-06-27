@@ -1,6 +1,6 @@
 {
     "parent" : "minecraft:item/generated",
     "textures" : {
-        "layer0" : "two:item/regolith_dust"
+        "layer0" : "norsecraft:item/regolith_dust"
     }
 }

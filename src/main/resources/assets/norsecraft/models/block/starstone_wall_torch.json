@@ -1,6 +1,6 @@
 {
   	"parent": "minecraft:block/template_torch_wall",
     "textures": {
-        "torch": "two:block/starstone_torch"
+        "torch": "norsecraft:block/starstone_torch"
     }
 }

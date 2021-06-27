@@ -1,7 +1,7 @@
 {
 	"variants" : {
     	"" : {
-			"model" : "two:block/celestium_block"
+			"model" : "norsecraft:block/celestium_block"
 		}
 	}
 }

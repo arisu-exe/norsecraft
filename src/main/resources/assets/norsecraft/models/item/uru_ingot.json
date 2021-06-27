@@ -1,6 +1,6 @@
 {
     "parent" : "minecraft:item/generated",
     "textures" : {
-        "layer0" : "two:item/uru_ingot"
+        "layer0" : "norsecraft:item/uru_ingot"
     }
 }

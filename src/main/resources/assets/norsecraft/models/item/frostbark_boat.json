@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "two:item/frostbark_boat"
+        "layer0": "norsecraft:item/frostbark_boat"
     }
 }

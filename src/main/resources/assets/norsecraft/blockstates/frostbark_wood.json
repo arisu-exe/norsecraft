@@ -1,7 +1,7 @@
 {
     "variants" : {
-        "axis=y" : { "model" : "two:block/frostbark_wood" },
-        "axis=z" : { "model" : "two:block/frostbark_wood", "x" : 90 },
-        "axis=x" : { "model" : "two:block/frostbark_wood", "x" : 90, "y" : 90 }
+        "axis=y" : { "model" : "norsecraft:block/frostbark_wood" },
+        "axis=z" : { "model" : "norsecraft:block/frostbark_wood", "x" : 90 },
+        "axis=x" : { "model" : "norsecraft:block/frostbark_wood", "x" : 90, "y" : 90 }
     }
 }

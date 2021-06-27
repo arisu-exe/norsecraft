@@ -1,7 +1,7 @@
 {
 	"variants" : {
     	"" : {
-			"model" : "two:block/nidavellir_celestium_ore"
+			"model" : "norsecraft:block/nidavellir_celestium_ore"
 		}
 	}
 }

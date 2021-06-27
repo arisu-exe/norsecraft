@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "two:block/starstone_wall_torch"
+      "model": "norsecraft:block/starstone_wall_torch"
     },
     "facing=north": {
-      "model": "two:block/starstone_wall_torch",
+      "model": "norsecraft:block/starstone_wall_torch",
       "y": 270
     },
     "facing=south": {
-      "model": "two:block/starstone_wall_torch",
+      "model": "norsecraft:block/starstone_wall_torch",
       "y": 90
     },
     "facing=west": {
-      "model": "two:block/starstone_wall_torch",
+      "model": "norsecraft:block/starstone_wall_torch",
       "y": 180
     }
   }

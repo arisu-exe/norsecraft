@@ -1,7 +1,7 @@
 {
 	"variants" : {
     	"" : {
-			"model" : "two:block/uru_block"
+			"model" : "norsecraft:block/uru_block"
 		}
 	}
 }

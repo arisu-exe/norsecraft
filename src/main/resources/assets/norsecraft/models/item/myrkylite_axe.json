@@ -1,6 +1,6 @@
 {
     "parent" : "minecraft:item/handheld",
     "textures" : {
-        "layer0" : "two:item/myrkylite_axe"
+        "layer0" : "norsecraft:item/myrkylite_axe"
     }
 }

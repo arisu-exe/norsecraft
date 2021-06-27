@@ -1,7 +1,7 @@
 {
 	"variants" : {
     	"" : {
-			"model" : "two:block/frostbark_planks"
+			"model" : "norsecraft:block/frostbark_planks"
 		}
 	}
 }

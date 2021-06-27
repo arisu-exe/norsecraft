@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "two:item/myrkylite_capped_arrow"
+        "layer0": "norsecraft:item/myrkylite_capped_arrow"
     }
 }

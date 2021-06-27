@@ -1,7 +1,7 @@
 {
     "variants" : {
-        "type=bottom" : { "model" : "two:block/frostbark_slab" },
-        "type=top" : { "model" : "two:block/frostbark_slab_top" },
-        "type=double" : { "model" : "two:block/frostbark_planks" }
+        "type=bottom" : { "model" : "norsecraft:block/frostbark_slab" },
+        "type=top" : { "model" : "norsecraft:block/frostbark_slab_top" },
+        "type=double" : { "model" : "norsecraft:block/frostbark_planks" }
     }
 }
