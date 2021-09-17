@@ -1,0 +1,9 @@
+{
+	"item.armor.equip_myrkylite" : {
+		"category" : "item",
+		"subtitle" : "subtitles.item.armor.equip_myrkylite",
+		"sounds" : [
+			"norsecraft:item/armor/equip_myrkylite"
+		]
+	}
+}
